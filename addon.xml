@@ -6,9 +6,9 @@
   provider-name="powlo">
   <extension point="xbmc.addon.repository"
              name="powlo's Add-on Repository">
-    <info compressed="true">path to addons.xml on github</info>
-    <checksum>path to addons.xml.md5 on github</checksum>
-    <datadir zip="true">path to download directory containing addon zips on github</datadir>
+    <info compressed="true">http://raw.github.com/powlo/repository.powlo/master/addons.xml</info>
+    <checksum>http://raw.github.com/powlo/repository.powlo/master/addons.xml.md5</checksum>
+    <datadir zip="true">http://raw.github.com/powlo/repository.powlo/master/download</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Install Add-ons from powlo's repository</summary>
