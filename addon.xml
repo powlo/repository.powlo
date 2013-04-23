@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon
   id="repository.powlo"
-  name="powlo Add-ons"
+  name="powlo's Add-ons"
   version="0.0.1"
   provider-name="powlo">
   <extension point="xbmc.addon.repository"
