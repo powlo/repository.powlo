@@ -7,12 +7,12 @@
     <requires>
   	  <import addon="xbmc.python" version="2.0"/>
     </requires>
-    <extension point="xbmc.python.module" library="resources/lib"/>
     <extension point="xbmc.python.script" library="default.py"/>
+    <extension point="xbmc.python.module" library="resources/lib"/>
     <extension point="xbmc.addon.metadata">
   	  <platform>all</platform>
   	  <summary lang="en">XBMC support for Pydev debugging.</summary>
   	  <description lang="en">Downloads and patches PyDev and puts code on 'sys.path'.</description>
     </extension>
   </addon>
-</addons>
+</addons>screen
