@@ -1,18 +1,49 @@
-﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-  <addon id="script.pydev.debug"
-  	     name="XMBC Pydev Debug"
-  	     version="0.0.2"
-  	     provider-name="powlo">
-    <requires>
-  	  <import addon="xbmc.python" version="2.0"/>
-    </requires>
-    <extension point="xbmc.python.script" library="default.py"/>
-    <extension point="xbmc.python.module" library="resources/lib"/>
-    <extension point="xbmc.addon.metadata">
-  	  <platform>all</platform>
-  	  <summary lang="en">XBMC support for Pydev debugging.</summary>
-  	  <description lang="en">Downloads and patches PyDev and puts code on 'sys.path'.</description>
-    </extension>
-  </addon>
-</addons>screen
+<addon id="script.pydev.debug"
+       name="Pydev Debug"
+       version="0.0.3"
+       provider-name="powlo">
+  <requires>
+    <import addon="xbmc.python" version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py"/>
+  <extension point="xbmc.python.module" library="resources/lib"/>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en">Support for Pydev debugging.</summary>
+    <description lang="en">Downloads and patches PyDev and puts code on 'sys.path'.</description>
+  </extension>
+</addon>
+<addon
+  id="weather.metoffice"
+  version="0.0.2"
+  name="Met Office"
+  provider-name="powlo">
+  <requires>
+	<import addon="xbmc.python" version="2.0"/>
+  </requires>
+  <extension point="xbmc.python.weather" library="default.py"/>
+  <extension point="xbmc.addon.metadata">
+	<summary lang="en">Weather forecast from the Met Office.</summary>
+	<description lang="en">Weather forecast provided by Met Office (http://www.metoffice.gov.uk/)</description>
+	<platform>all</platform>
+  </extension>
+</addon>
+<addon id="repository.powlo"
+	   name="powlo's Add-ons"
+	   version="0.0.2"
+	   provider-name="powlo">
+  <extension point="xbmc.addon.repository"
+             name="powlo's Add-on Repository">
+    <info compressed="false">http://raw.github.com/powlo/repository.powlo/master/addons.xml</info>
+    <checksum>http://raw.github.com/powlo/repository.powlo/master/addons.xml.md5</checksum>
+    <datadir zip="true">http://raw.github.com/powlo/repository.powlo/master/download</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Install Add-ons from powlo's repository</summary>
+    <description lang="en">Download and install add-ons from powlo's repository.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+</addons>
