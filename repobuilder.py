@@ -159,7 +159,6 @@ if ( __name__ == "__main__" ):
         os.chdir(repofolder)
     #finish up with addons
     print "Creating addons.xml..."
-    print "Current path: ", os.path.realpath(os.curdir)
     addons_xml = addons_xml.strip() + u("\n</addons>\n")
     _save_file( addons_xml.encode( "UTF-8" ), file="addons.xml" )
     #generate md5
