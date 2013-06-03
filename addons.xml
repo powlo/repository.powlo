@@ -17,7 +17,7 @@
 </addon>
 <addon
   id="weather.metoffice"
-  version="0.0.2"
+  version="0.0.3"
   name="Met Office"
   provider-name="powlo">
   <requires>
