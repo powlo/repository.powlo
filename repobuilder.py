@@ -60,19 +60,6 @@ def generate_md5( filename ):
     except Exception as e:
         print("An error occurred creating addons.xml.md5 file!\n%s" % e)
 
-def get_addon_contents(filename):
-    """
-    Takes a filename and returns the contents of the file with
-    initial <?xml...> element chomped out.
-    Note: Could do this more robustly with an xml parser.
-    """
-    lines = open( filename, "r" ).read().decode('utf-8').splitlines()
-    for line in lines:
-        line.rstrip()
-        if ( line.find( "<?xml" ) >= 0 ):
-            lines.remove(line)
-    return u('\n').join(lines)
-
 def filterdirectory(directory, filehandle):
     """
     Takes a directory and returns its contents
@@ -133,8 +120,8 @@ if ( __name__ == "__main__" ):
         print "Addon '%s', version '%s'." % (id, version)
         print "######################################"
         #add addon into addons
-        addon_contents = get_addon_contents(addon_xml)
-        addons_xml += addon_contents.rstrip() + u("\n")
+        addon_contents = etree.tostring(root, encoding='utf-8')
+        addons_xml += addon_contents.decode('utf-8').rstrip() + u("\n")
 
         #make folder to recieve zip file
         zipfolder = os.path.join(downloadfolder,id)
