@@ -63,9 +63,10 @@ def generate_md5( filename ):
 def get_addon_contents(filename):
     """
     Takes a filename and returns the contents of the file with
-    initial <?xml...> element chomped out
+    initial <?xml...> element chomped out.
+    Note: Could do this more robustly with an xml parser.
     """
-    lines = open( filename, "r" ).read().splitlines()
+    lines = open( filename, "r" ).read().decode('utf-8').splitlines()
     for line in lines:
         line.rstrip()
         if ( line.find( "<?xml" ) >= 0 ):
@@ -160,7 +161,7 @@ if ( __name__ == "__main__" ):
     #finish up with addons
     print "Creating addons.xml..."
     addons_xml = addons_xml.strip() + u("\n</addons>\n")
-    _save_file( addons_xml.encode( "UTF-8" ), file="addons.xml" )
+    _save_file( addons_xml.encode( "utf-8" ), file="addons.xml" )
     #generate md5
     print "Creating addons.xml.md5..."
     m = md5.new( open( "addons.xml" ).read() ).hexdigest()
