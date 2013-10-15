@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="repository.powlo"
 	   name="powlo's Add-ons"
-	   version="0.0.6"
+	   version="0.0.7"
 	   provider-name="powlo">
   <extension point="xbmc.addon.repository"
              name="powlo's Add-on Repository">
-    <info compressed="false">http://raw.github.com/powlo/repository.powlo/master/addons.xml</info>
-    <checksum>http://raw.github.com/powlo/repository.powlo/master/addons.xml.md5</checksum>
-    <datadir zip="true">http://raw.github.com/powlo/repository.powlo/master/download</datadir>
+    <info compressed="false">http://vault-powlo.googlecode.com/git/addons.xml</info>
+    <checksum>http://vault-powlo.googlecode.com/git/addons.xml.md5</checksum>
+    <datadir zip="true">http://vault-powlo.googlecode.com/git/download</datadir>
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Install Add-ons from powlo's repository</summary>
